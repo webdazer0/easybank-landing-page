@@ -1,0 +1,19 @@
+body {
+    font-family: 'Public Sans', sans-serif;
+    margin: 0;
+    color: var(--grayBlue);
+}
+.wrapper {
+    padding: 0 var(--wrapperSpace);
+    max-width: calc(1115px + 1.5em);
+    margin: auto;
+    width: 100%;
+    box-sizing: border-box;
+}
+.desc {
+    font-size: .9em;
+    line-height: 1.7em;
+}
+.is-hidden {
+    display: none !important;
+}

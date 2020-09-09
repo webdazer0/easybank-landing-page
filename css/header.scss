@@ -1,0 +1,29 @@
+.header {
+    padding: 1em 0;
+    justify-content: space-between;
+    position: fixed;
+    z-index: 3;
+    width: 100%;
+    background: white;
+    .button { display: none; }
+    &__logo {
+        align-self: center;
+    }
+    &__content {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        background: orange;
+    }
+
+
+    @media screen and (min-width: 1024px) {
+        &__content {
+            background: transparent;
+        }
+        .button { display: inline; }
+    }
+}
+
+
+

@@ -1,0 +1,34 @@
+.why {
+    text-align: center;
+    background-color: var(--gray);
+    padding-top: 2.5em;
+    padding-bottom: 5em;
+    .desc {
+        margin-bottom: 0;
+        font-size: 1em;
+    }
+    &__grid {
+        padding: 0 var(--wrapperSpace);
+    }
+    &__item {
+        img {
+            margin-top: 1em;
+        }
+    }
+    @media screen and (min-width: 768px) {
+        text-align: left;
+        &__grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-column-gap: 1em;
+            justify-content: center;
+            padding: 2em 0;
+            padding-bottom: 0;
+        }
+    }
+    @media screen and (min-width: 1024px) {
+        &__grid {
+            grid-template-columns: repeat(4, 1fr);
+        }
+    }
+}

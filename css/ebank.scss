@@ -1,0 +1,54 @@
+.ebank {
+    text-align: center;
+    position: relative;
+    padding-bottom: 3em;
+    .desc {
+        margin-bottom: 2.5em;
+    }
+    &__image {
+        margin: 0 calc(-1 * var(--wrapperSpace));
+        height: 300px;
+        background: url('/public/images/image-mockups.png') center bottom no-repeat, url('/public/images/bg-intro-mobile.svg') center no-repeat;
+        background-size: 345px, cover;
+        margin-bottom: 1.5em;
+    }
+    &__description {
+        grid-area: description;
+    }
+    
+
+    @media screen and (min-width: 768px)  {
+        text-align: left;
+        background: url('/public/images/bg-intro-desktop.svg') left 450px top -170px no-repeat;
+        background-size: cover;
+        padding-bottom: 0em;
+        min-height: 550px;
+        box-sizing: border-box;
+        padding-top: 83px;
+
+        &__content {
+            display: grid;
+            position: relative;
+            min-height: 550px;
+            grid-template-areas: "description image";
+            grid-template-columns: 370px 1fr;
+            align-items: center;
+            border: solid 1px red;
+        }
+        &__image {
+            grid-area: image;
+            background: url(/public/images/image-mockups.png) left 0px bottom 95px no-repeat;
+            background-size: cover;
+            position: absolute;
+            min-height: inherit;
+            width: 610px;
+            height: 750px;
+            margin: 0;
+            right: 0px;
+            bottom: -180px;
+        }
+        &__description {
+            border: solid 1px green;
+        }
+    }
+}

@@ -1,0 +1,70 @@
+.menu {
+  display: none;
+  list-style: none;
+}
+
+.menu a {
+  text-decoration: none;
+  color: var(--grayBlue);
+  padding: 0 .8em;
+}
+
+.menu__button {
+  background: url("../public/images/icon-hamburger.svg") no-repeat center;
+  width: 40px;
+  height: 40px;
+}
+
+.menu__checkbox {
+  display: none;
+}
+
+.menu__checkbox:checked ~ .menu__button {
+  background: url("../public/images/icon-close.svg") no-repeat center;
+}
+
+.menu__checkbox:checked ~ .menu {
+  display: block;
+  position: absolute;
+  top: 100%;
+  padding: 1em;
+  left: 0;
+  right: 0;
+  height: 100vh;
+  background: -webkit-gradient(linear, left top, left bottom, from(var(--darkBlue)), color-stop(90%, transparent));
+  background: linear-gradient(to bottom, var(--darkBlue) 0%, transparent 90%);
+}
+
+.menu__checkbox:checked ~ .menu .menu__item:first-of-type a {
+  padding-top: 2em;
+  border-radius: .5em .5em 0 0;
+}
+
+.menu__checkbox:checked ~ .menu .menu__item:last-of-type a {
+  padding-bottom: 2em;
+  border-radius: 0 0 .5em .5em;
+}
+
+.menu__checkbox:checked ~ .menu a {
+  background: white;
+  padding: .8em 1em;
+  color: var(--darkBlue);
+  font-size: 1.1em;
+  display: block;
+  text-align: center;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+@media screen and (min-width: 1024px) {
+  .menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .menu__button {
+    display: none;
+  }
+}
+/*# sourceMappingURL=menu.css.map */

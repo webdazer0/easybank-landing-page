@@ -1,0 +1,41 @@
+.header {
+  padding: 1em 0;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  position: fixed;
+  z-index: 3;
+  width: 100%;
+  background: white;
+}
+
+.header .button {
+  display: none;
+}
+
+.header__logo {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.header__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background: orange;
+}
+
+@media screen and (min-width: 1024px) {
+  .header__content {
+    background: transparent;
+  }
+  .header .button {
+    display: inline;
+  }
+}
+/*# sourceMappingURL=header.css.map */

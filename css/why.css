@@ -1,0 +1,45 @@
+.why {
+  text-align: center;
+  background-color: var(--gray);
+  padding-top: 2.5em;
+  padding-bottom: 5em;
+}
+
+.why .desc {
+  margin-bottom: 0;
+  font-size: 1em;
+}
+
+.why__grid {
+  padding: 0 var(--wrapperSpace);
+}
+
+.why__item img {
+  margin-top: 1em;
+}
+
+@media screen and (min-width: 768px) {
+  .why {
+    text-align: left;
+  }
+  .why__grid {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 1em;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding: 2em 0;
+    padding-bottom: 0;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .why__grid {
+    -ms-grid-columns: (1fr)[4];
+        grid-template-columns: repeat(4, 1fr);
+  }
+}
+/*# sourceMappingURL=why.css.map */

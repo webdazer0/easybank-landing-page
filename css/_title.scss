@@ -1,0 +1,54 @@
+@mixin title {
+    color: var(--darkBlue);
+    font-size: 2.5em;
+    font-weight: 300;
+    line-height: 1.3;
+    // margin: 0;
+    margin-bottom: .5em;
+}
+@mixin icon {
+    width: 25px;
+    height: 25px;
+    padding-left: 15px;
+    display: inline-flex;
+    background-repeat: no-repeat;
+    background-position: center;
+
+}
+.title {
+    &__h1 {
+        @include title;
+    }
+    &__h2 {
+        @include title;
+        font-size: 1.5em;
+        line-height: 1;
+    }
+    &__h3 {
+        @include title;
+        font-size: 1em;
+        line-height: 1.3;
+    }
+}
+.icon {
+    &__facebook {
+        @include icon;
+        background-image: url('../public/images/icon-facebook.svg');
+    }
+    &__youtube {
+        @include icon;
+        background-image: url('../public/images/icon-youtube.svg');
+    }
+    &__twitter {
+        @include icon;
+        background-image: url('../public/images/icon-twitter.svg');
+    }
+    &__pinterest {
+        @include icon;
+        background-image: url('../public/images/icon-pinterest.svg');
+    }
+    &__instagram {
+        @include icon;
+        background-image: url('../public/images/icon-instagram.svg');
+    }
+}
